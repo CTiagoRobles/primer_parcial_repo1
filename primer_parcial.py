@@ -47,7 +47,7 @@ def cargar_matriz_notas(n, m):
     n = filas (ALUMNOS)
     En caso de que este conteste algo erroneo se le va a volver a preguntar.
     """
-    todas_las_notas= []
+    todas_las_notas= [] #LISTA "MAIN" / principal
 
 
     for i in range(m): #M COLUMNAS = EXAMENES
@@ -65,10 +65,12 @@ def cargar_matriz_notas(n, m):
                         print("ERROR: Ingrese un  numero dentro del rango (1-10)") #en caso de que no cumpla ese rango, entonces que le diga ERROR
                 else:
                     print("ERROR: Ingrese un numero entero.") # en caso de que no sea entero ni numero.
-            notas_almunos_guardar.append(notas_alumno) 
-        todas_las_notas.append(notas_almunos_guardar)
+            notas_almunos_guardar.append(notas_alumno) #agrego la nota de cada alumno a la lista temporal
+        todas_las_notas.append(notas_almunos_guardar) #una vez termina de agregar la nota de cada alumno a la lista temporal, esta se pasan a la lista "main"
         print(f"Notas del examen {i + 1} cargadas: {notas_almunos_guardar}")
     return todas_las_notas
 
 cargar_matriz_notas(2, 5) # para testar. 5 examenes y 2 alumnos, tenia pensado pedir los datos en el main.
+
+
 
